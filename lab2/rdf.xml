@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<rdf:RDF
+xmlns:rdf = "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:foaf = "http://xmlns.com/foaf/0.1/"
+xmlns:bio = "http://purl.org/vocab/bio/0.1/"
+>
+
+<foaf:Person rdf:ID="johndoe">
+   <foaf:gender>male</foaf:gender>
+   <foaf:givenname>John</foaf:givenname>
+   <foaf:family_name>Doe</foaf:family_name>
+   <foaf:homepage rdf:resource="http://johndoe.com"/>
+   
+   <bio:Graduation>
+        <rdf:Seq ID="graduations">
+          <rdf:li>
+            <foaf:Organization rdf:ID="university">
+                <bio:Date>2025-01-01</bio:Date>
+                <foaf:name>University Name</foaf:name>
+            </foaf:Organization>
+          </rdf:li>
+          <rdf:li>
+             <foaf:Organization rdf:ID="highschool">
+                <bio:Date>2021-01-01</bio:Date>
+                <foaf:name>Highschool Name</foaf:name>
+            </foaf:Organization>
+          </rdf:li>
+        </rdf:Seq>
+   </bio:Graduation>
+</foaf:Person>
+
+</rdf:RDF>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <div itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">John Doe</span>
+        <span itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization" itemref="university"></span>
+        <span itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization" itemref="highschool"></span>
+        <span itemprop="identifier">12345</span>
+        <span itemprop="jobTitle">student</span>
+    </div>
+    <div id="university">
+        <span itemprop="name">University</span>
+        <span itemprop="date">2025-01-01</span>
+        <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+            <span itemprop="streetAddress">55 School Street</span>
+            <span itemprop="addressLocality">City</span>,
+            <span itemprop="postalCode">12-345</span>
+        </div>
+    </div>
+    <div id="highschool">
+        <span itemprop="name">Highschool</span>
+        <span itemprop="date">2021-01-01</span>
+        <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+            <span itemprop="streetAddress">12 Highschool Street</span>
+            <span itemprop="addressLocality">City</span>,
+            <span itemprop="postalCode">12-345</span>
+        </div>
+    </div>
+</body>
+
+</html>
