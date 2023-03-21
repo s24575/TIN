@@ -6,14 +6,9 @@ body {
 }
 
 .main-panel {
-    margin-left: 40px;
-    margin-right: 40px;
-}
-
-.top-part {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    font-size: 12px;
+    width: 80%;
+    margin: 0 auto;
+    display: block;
 }
 
 .left-panel {
@@ -21,10 +16,37 @@ body {
 }
 
 .right-panel {
+    display: flex;
+    flex-wrap: wrap;
     background-color: rgb(241, 241, 241, 0.8);
     padding: 20px;
     overflow-y: auto;
     height: 625px;
+}
+
+.right-panel>* {
+    flex: 1 1 160px;
+}
+
+.one {
+    width:50%;
+    padding: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: rgba(248, 248, 248, 0.9);
+    min-width: 400px;
+}
+
+.two {
+    width: 50%;
+    padding: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: rgba(248, 248, 248, 0.9);
+}
+
+.one img {
+    width: 100%;
 }
 
 .footer {
@@ -32,11 +54,12 @@ body {
     background-color: rgb(56, 56, 200, 0.9);
     color: #f1f1f1;
     text-align: center;
+    display: flex;
+    justify-content: space-between;
 }
 
 .footer p {
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin: 5px 8px 5px 8px;
 }
 
 .title {
@@ -87,6 +110,7 @@ tr:nth-child(even) {
 /* links */
 
 ul {
+    display: flex;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -107,6 +131,15 @@ a {
 
 a:hover {
     background-color: #ccc;
+}
+
+ul ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background-color: #ddd;
+    min-width: 120px;
 }
 
 ul ul li {
