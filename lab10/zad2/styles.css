@@ -1,0 +1,40 @@
+#calculator {
+    padding-top: 20px;
+    width: 40%;
+    margin: 0 auto;
+}
+
+#result {
+    background-color: cornflowerblue;
+    height: 50px;
+    font-size: 40px;
+    text-align: right;
+    padding: 5px;
+}
+
+#input {
+    display: flex;
+    padding: 5px;
+}
+
+#input > div, #input > button {
+    float: left;
+    white-space: nowrap;
+    width: 20%;
+    margin-right: 5%;
+}
+
+input, label {
+    display: block;
+}
+
+#first, #second, #operation {
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+}
+
+#operation > option {
+    font-size: 30px;
+    text-align: center;
+}
