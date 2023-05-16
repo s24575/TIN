@@ -1,6 +1,6 @@
 function calculate() {
-    const a = parseInt(document.getElementById("first").value);
-    const b = parseInt(document.getElementById("second").value);
+    const a = parseFloat(document.getElementById("first").value);
+    const b = parseFloat(document.getElementById("second").value);
     const operation = document.getElementById("operation").value;
     const resultBox = document.getElementById("result");
 
