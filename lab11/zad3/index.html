@@ -10,38 +10,67 @@
     <div class="row">
         <div class="column">
             <img src="https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg"
-                onclick="openImage(1);" alt="album image">
+                onclick="showGallery();showSlides(1);" alt="album image">
         </div>
         <div class="column">
-            <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014__340.jpg" onclick="openImage(2);"
-                alt="album image">
+            <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014__340.jpg"
+                onclick="showGallery();showSlides(2);" alt="album image">
         </div>
         <div class="column">
             <img src="https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg"
-                onclick="openImage(3);" alt="album image">
+                onclick="showGallery();showSlides(3);" alt="album image">
         </div>
         <div class="column">
-            <img src="https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg" onclick="openImage(4);"
-                alt="album image">
+            <img src="https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg"
+                onclick="showGallery();showSlides(4);" alt="album image">
         </div>
     </div>
 
-    <div class="gallery">
-        <div class="image">
-            <img src="https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg"
-                onclick="openImage(1);" alt="album image">
-        </div>
-        <div class="image">
-            <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014__340.jpg" onclick="openImage(2);"
-                alt="album image">
-        </div>
-        <div class="image">
-            <img src="https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg"
-                onclick="openImage(3);" alt="album image">
-        </div>
-        <div class="image">
-            <img src="https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg" onclick="openImage(4);"
-                alt="album image">
+    <div id="myGallery" class="gallery">
+        <span class="close" onclick="closeGallery();">X</span>
+        <div class="gallery-contents">
+            <div class="image">
+                <img src="https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg"
+                    onclick="showSlides(1);" alt="album image">
+            </div>
+            <div class="image">
+                <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014__340.jpg"
+                    onclick="showSlides(2);" alt="album image">
+            </div>
+            <div class="image">
+                <img src="https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg"
+                    onclick="showSlides(3);" alt="album image">
+            </div>
+            <div class="image">
+                <img src="https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg" onclick="showSlides(4);"
+                    alt="album image">
+            </div>
+
+            <a class="prev" onclick="nextSlide(-1);">&#10094;</a>
+            <a class="next" onclick="nextSlide(1);">&#10095;</a>
+
+            <div class="row">
+                <div class="column">
+                    <img class="preview"
+                        src="https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg"
+                        onclick="selectSlide(1);" alt="album image">
+                </div>
+                <div class="column">
+                    <img class="preview" src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014__340.jpg"
+                        onclick="selectSlide(2);" alt="album image">
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <img class="preview"
+                        src="https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg"
+                        onclick="selectSlide(3);" alt="album image">
+                </div>
+                <div class="column">
+                    <img class="preview" src="https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg"
+                        onclick="selectSlide(4);" alt="album image">
+                </div>
+            </div>
         </div>
     </div>
 </body>
