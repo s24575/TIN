@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+
+.row {
+    width: 100%;
+    padding: 0 20%;
+}
+
+.row > .column {
+    padding: 0 8px;
+}
+
+.column{
+    float: left;
+    width: 50%;
+}
+
+.row > .column > img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+/* .gallery {
+
+} */
+
+.image {
+    height: 5px;
+    /* margin: auto; */
+    /* display: none; */
+}
+
+.image > img {
+    margin: auto;
+    width: 80%;
+    height: auto;
+    max-height: 200px;
+}
+
+.shown {
+    display: unset;
+}
