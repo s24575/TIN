@@ -1,0 +1,26 @@
+body {
+    padding: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table th,
+table td {
+    border: 1px solid #666;
+    padding: 8px;
+}
+
+thead {
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgb(29, 29, 167) 10%, rgba(0, 212, 255, 1) 100%);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ccc;
+}
+
+#news-rotator .banner {
+    position: absolute;
+}
