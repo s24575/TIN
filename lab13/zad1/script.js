@@ -1,4 +1,8 @@
 $(document).ready(function () {
+  var form = $('#photo-form');
+  form.hide();
+  var currentAlbum = null;
+
   $.ajax({
     url: 'https://jsonplaceholder.typicode.com/albums',
     method: 'GET',
@@ -7,7 +11,7 @@ $(document).ready(function () {
         var galleryItem = $('<div class="gallery-item"></div>');
         galleryItem.append('<h3>' + album.title + '</h3>');
         galleryItem.data('albumId', album.id);
-        $('.gallery').append(galleryItem);
+        $('.titles').append(galleryItem);
       });
     }
   });
@@ -15,17 +19,18 @@ $(document).ready(function () {
   $(document).on('click', '.gallery-item', function () {
     var albumId = $(this).data('albumId');
     var gallery = $(this).closest('.gallery');
+    var titles = $(this).closest('.titles');
 
     $.ajax({
       url: 'https://jsonplaceholder.typicode.com/photos',
       method: 'GET',
       data: { albumId: albumId },
       success: function (photos) {
-        gallery.empty();
+        titles.empty();
 
         var galleryItem = $('<div class="gallery-item"></div>');
         galleryItem.append('<h3>' + photos[0].albumId + ': ' + photos[0].title + '</h3>');
-        gallery.append(galleryItem);
+        titles.append(galleryItem);
 
         photos.forEach(function (photo) {
           var link = $(`<a class="example-image-link" href="${photo.url}" data-lightbox="example"></a>`)
@@ -33,14 +38,17 @@ $(document).ready(function () {
           link.append(thumbnail);
           gallery.append(link);
         });
+
+        currentAlbum = albumId;
+        form.show();
       }
     });
   });
 
-  $('#photo-form').submit(function (event) {
+  form.submit(function (event) {
     event.preventDefault();
 
-    var albumId = $('#album-id').val();
+    var albumId = currentAlbum;
     var title = $('#photo-title').val();
     var url = $('#photo-url').val();
 
@@ -53,7 +61,7 @@ $(document).ready(function () {
         url: url
       },
       success: function (response) {
-        console.log('Zdjęcie zostało dodane:', response);
+        console.log('Image has been added:', response);
       }
     });
   });

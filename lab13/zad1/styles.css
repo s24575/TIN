@@ -3,9 +3,22 @@
     flex-wrap: wrap;
 }
 
+.titles {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
 .gallery-item {
-    flex-basis: 100%;
-    padding: 10px;
+    flex-basis: 40%;
+    margin: 10px;
+}
+
+@media (max-width: 768px) {
+    .gallery-item {
+        flex-basis: 100%;
+        margin: 10px;
+    }
 }
 
 .gallery-item img {
