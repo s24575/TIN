@@ -36,3 +36,9 @@ try {
 } catch (err) {
     console.error(err);
 }
+
+/*
+node script.js open files/file.txt
+node script.js append files/file.txt test
+node script.js delete files/file.txt
+*/
